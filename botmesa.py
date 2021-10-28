@@ -139,7 +139,8 @@ def user_collection_callback_handler(update: Update, context: CallbackContext) -
 
     query.edit_message_text(            
         text=text,
-        parse_mode='Markdown'
+        parse_mode='Markdown',
+        disable_web_page_preview=True
     )
 
     return ConversationHandler.END
@@ -178,7 +179,8 @@ def main() -> None:
     """Start the bot."""
 
     # Create the Updater and pass it your bot's token.    
-    token = os.environ['TOKEN']    
+    token = os.environ['TOKEN']
+    
     updater = Updater( token )
 
     # Get the dispatcher to register handlers
