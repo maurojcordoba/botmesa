@@ -26,8 +26,7 @@ def start(update: Update, context: CallbackContext) -> int:
     update.message.reply_text(
         text=f'Bienvenido {user.first_name}! ¿Que deseas hacer?',        
         reply_markup=InlineKeyboardMarkup([
-            [InlineKeyboardButton(text='Listar juegos', callback_data='select_user')],
-            [InlineKeyboardButton(text='Saluda', callback_data='saluda')],
+            [InlineKeyboardButton(text='Listar juegos', callback_data='select_user')],            
             [InlineKeyboardButton(text='Sortea', callback_data='sortea')]
         ])
     )
