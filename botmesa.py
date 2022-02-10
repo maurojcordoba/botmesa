@@ -15,7 +15,7 @@ logger = logging.getLogger(__name__)
 MAIN = 0
 SELECT_USER = 2
 
-users_bgg = ['maurocor','juankazon','maticepe','juanecasla']
+users_bgg = ['maurocor','juankazon','maticepe','juanecasla', 'saga_kanon']
 
 # Define a few command handlers. These usually take the two arguments update and context.
 def start(update: Update, context: CallbackContext) -> int:
@@ -42,7 +42,7 @@ def sortea(update: Update, context: CallbackContext) -> None:
 
 def obtiene_lista_usuarios_des() -> str:
     """genera una lista desordenada"""    
-    users_list = ['juane','juank','matias','mauro']
+    users_list = ['juane','juank','matias','mauro','cristian']
     
     shuffle(users_list)  
     users_list = [ '{0}. {1}'.format(i+1,users_list[i]) for i in range(len(users_list))]  
