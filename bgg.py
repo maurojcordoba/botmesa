@@ -8,6 +8,7 @@ def obtiene_coleccion_por_usuario(user) -> list:
     data = xmltodict.parse(response.content)
     
     if (data) :
+        print(data)
         for item in data['items']['item']:
             bgg_id = item['@objectid']
             url_game =  f'https://boardgamegeek.com/boardgame/{bgg_id}'
